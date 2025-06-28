@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equinox Interactive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="website icon" type="png" href="assets/logo.png">
+</head>
+
+<section class="antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="#home" class="flex items-center space-x-2">
+                        <span class="text-2xl font-bold gradient-text font-orbitron">Equinox Interactive</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-300 hover:text-white px-3 py-2">Home</a>
+                        <a href="#about" class="nav-link text-gray-300 hover:text-white px-3 py-2">About</a>
+                        <a href="#team" class="nav-link text-gray-300 hover:text-white px-3 py-2">Team</a>
+                        <a href="#portfolio" class="nav-link text-gray-300 hover:text-white px-3 py-2">Games</a>
+                        <a href="#services" class="nav-link text-gray-300 hover:text-white px-3 py-2">Services</a>
+                        <a href="#contact" class="nav-link text-gray-300 hover:text-white px-3 py-2">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">About</a>
+                <a href="#team" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Team</a>
+                <a href="#portfolio" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Games</a>
+                <a href="#services" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Services</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden pt-16">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="assets/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/80"></div>
+        <div class="container mx-auto px-6 z-10 text-center fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-orbitron">
+                <span class="gradient-text">Small Team.</span><br>
+                <span>Big Dreams.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 slide-up">
+                Equinox Interactive is where game developers thrive bringing bold ideas to life and reshaping what games can be.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 slide-up">
+                <a href="#about" class="px-8 py-3 bg-purple-700 hover:bg-purple-600 text-white font-medium rounded-lg transition duration-300 transform hover:scale-105">
+                    View Portfolio
+                </a>
+                <a href="#contact" class="px-8 py-3 border border-purple-600 text-purple-400 hover:bg-purple-900/30 hover:text-white font-medium rounded-lg transition duration-300 transform hover:scale-105">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+            <a href="#about" class="text-gray-400 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 font-orbitron">
+                    <span class="gradient-text">About</span> Our Studio
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-emerald-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold mb-4 font-orbitron">Our Story</h3>
+                    <p class="text-gray-300 mb-6">
+                        Equinox Interactive began its journey in April 2025 with “Box Siege,” a small project that sparked big ideas.
+                        With three core members at its heart, the studio thrives on a shared vision: creating fresh, engaging games that break conventions while keeping players smiling.
+                    </p>
+                    <p class="text-gray-300 mb-8">
+                        What started as a simple school project soon grew into something more Equinox Interactive emerged with a clear ambition: to build games that are not only polished and purposeful, but also fresh and original.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 font-orbitron text-purple-400">Our Vision</h3>
+                            <p class="text-gray-300">
+                                To be a creative hub for game developers to bring bold, imaginative ideas to life
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-3 font-orbitron text-emerald-400">Our Mission</h3>
+                            <p class="text-gray-300">
+                                To challenge the monotony of mainstream gaming by delivering original and meaningful experiences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-1">
+                        <img src="assets/Team.png" 
+                             alt="NihonGames Studio Team" class="rounded-lg w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20 bg-gray-900">
+            <div class="mt-20">
+                <h3 class="text-3xl font-bold mb-10 text-center font-orbitron">Meet <span class="gradient-text">The Team</span></h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="team-member text-center">
+                        <div class="mb-4 overflow-hidden rounded-full w-40 h-40 mx-auto border-2 border-purple-600/30">
+                            <img src="assets/niko.png" alt="Team Member" class="w-full h-full object-cover transition duration-300">
+                        </div>
+                        <h4 class="text-xl font-bold font-orbitron">Niko</h4>
+                        <p class="text-purple-400 mb-2">Creative Director</p>
+                        <p class="text-gray-400 text-sm">
+                            Visionary leader with 15+ years in game design. Specializes in narrative-driven experiences.
+                        </p>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="team-member text-center">
+                        <div class="mb-4 overflow-hidden rounded-full w-40 h-40 mx-auto border-2 border-purple-600/30">
+                            <a href="https://www.instagram.com/zkyy._mss" target="_blank">
+                                <img src="assets/risky.jpg" alt="Team Member" class="w-full h-full object-cover transition duration-300">
+                            </a>
+                        </div>
+                        <h4 class="text-xl font-bold font-orbitron">BadutZY</h4>
+                        <p class="text-purple-400 mb-2">Lead Programmer</p>
+                        <p class="text-gray-400 text-sm">
+                            Technical wizard specializing in Unity and logic game.
+                        </p>
+                    </div>
+                    
+                    <!-- Team Member 3 -->
+                    <div class="team-member text-center">
+                        <div class="mb-4 overflow-hidden rounded-full w-40 h-40 mx-auto border-2 border-purple-600/30">
+                            <a href="https://www.instagram.com/swimmingfoxx_" target="_blank">
+                                <img src="assets/mario.jpg" alt="Team Member" class="w-full h-full object-cover transition duration-300">
+                            </a>
+                        </div>
+                        <h4 class="text-xl font-bold font-orbitron">SwimmingFox</h4>
+                        <p class="text-purple-400 mb-2">Art Director</p>
+                        <p class="text-gray-400 text-sm">
+                            Creates breathtaking visuals with a unique blend of traditional and digital art.
+                        </p>
+                    </div>
+                    
+                    <!-- Team Member 4 -->
+                    <div class="team-member text-center">
+                        <div class="mb-4 overflow-hidden rounded-full w-40 h-40 mx-auto border-2 border-purple-600/30">
+                            <a href="https://www.instagram.com/gamersindo_17" target="_blank">
+                                <img src="assets/Ari.jpg" alt="Team Member" class="w-full h-full object-cover transition duration-300">
+                            </a>
+                        </div>
+                        <h4 class="text-xl font-bold font-orbitron">Ari8Bit</h4>
+                        <p class="text-purple-400 mb-2">Sound Designer</p>
+                        <p class="text-gray-400 text-sm">
+                            Award-winning audio engineer who brings our games to life with immersive soundscapes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-900/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 font-orbitron">
+                    Our <span class="gradient-text">Games</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-emerald-500 mx-auto"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-6">
+                    Explore our portfolio of critically acclaimed games that showcase our creativity and technical expertise.
+                </p>
+            </div>
+            
+            <!-- Game 1 -->
+            <div class="flex flex-col lg:flex-row items-center gap-10 mb-20 card-hover">
+                <div class="lg:w-1/2 relative group">
+                    <div class="overflow-hidden rounded-xl border border-gray-700 shadow-2xl">
+                        <img src="assets/box siege.jpg" 
+                             alt="Box Siege" class="w-full h-auto transition duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        PC
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-3xl font-bold mb-3 font-orbitron">Box Siege</h3>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-800 text-purple-400 px-3 py-1 rounded-full text-sm">PvP</span>
+                        <span class="bg-gray-800 text-emerald-400 px-3 py-1 rounded-full text-sm">Co-Op</span>
+                        <span class="bg-gray-800 text-blue-400 px-3 py-1 rounded-full text-sm">Puzzle</span>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Box Siege is a vibrant 2D action platformer that began as local co-op PvP and now delivers a solo story mode with absurd characters, glitchy worlds, and two mind bending endings.
+                        Play as Box Bandel, a mischievous living cube, guided by an odd AI named Patch. Explore twisted dimensions, solve logic puzzles, and face a choice that defines everything: freedom or stability.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-bold mb-2 font-orbitron">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">Unity</span>
+                            <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">Aseprite</span>
+                            <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">Cocos</span>
+                        </div>
+                    </div>
+                    <a href="https://equinoxinteractive.github.io/BoxSiege/" target="_blank" class="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium">
+                        View Case Study
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 font-orbitron">
+                    Our <span class="gradient-text">Services</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-emerald-500 mx-auto"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-6">
+                    Comprehensive game development services from concept to launch and beyond.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
+                    <div class="service-icon text-purple-500 text-4xl mb-4">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-orbitron">Full-Cycle Game Development</h3>
+                    <p class="text-gray-400">
+                        End-to-end game development services from initial concept to final release. We handle design, programming, 
+                        art, sound, QA, and deployment across all major platforms.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
+                    <div class="service-icon text-purple-500 text-4xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-orbitron">Game Prototyping</h3>
+                    <p class="text-gray-400">
+                        Rapid prototyping to test game concepts and mechanics. We help validate your ideas quickly and cost-effectively 
+                        before committing to full production.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
+                    <div class="service-icon text-purple-500 text-4xl mb-4">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-orbitron">Art & Animation</h3>
+                    <p class="text-gray-400">
+                        High-quality 2D/3D art production including concept art, character design, environment modeling, 
+                        textures, and animations tailored to your game's style.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
+                    <div class="service-icon text-purple-500 text-4xl mb-4">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-orbitron">Sound & Music</h3>
+                    <p class="text-gray-400">
+                        Professional sound design and original music composition. We create immersive audio experiences 
+                        that enhance gameplay and emotional impact.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
+                    <div class="service-icon text-purple-500 text-4xl mb-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-orbitron">Publishing Support</h3>
+                    <p class="text-gray-400">
+                        Assistance with game publishing including platform compliance, store optimization, marketing materials, 
+                        and launch strategy to maximize your game's success.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
+                    <div class="service-icon text-purple-500 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 font-orbitron">Co-Development</h3>
+                    <p class="text-gray-400">
+                        Flexible co-development partnerships where we augment your existing team with specialized skills 
+                        and resources to accelerate your project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold font-orbitron text-center gradient-text mb-12 slide-up">
+                Connect With Us
+            </h2>
+            <p class="text-center text-light/80 max-w-2xl mx-auto mb-12 fade-in">
+                Follow us on social media to stay updated with our latest projects, news, and behind-the-scenes content.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="https://www.tiktok.com/@equinox.interactive" target="_blank" class="service-card card-hover bg-light/10 p-6 rounded-lg text-center transition-all fade-in">
+                    <div class="text-4xl text-primary mb-4 service-icon"><i class="fab fa-tiktok"></i></div>
+                    <h3 class="text-xl font-semibold font-orbitron mb-2">TikTok</h3>
+                    <p class="text-light/80">Join us on TikTok for fun game dev content, teasers, and creative behind-the-scenes moments.</p>
+                </a>
+                <a href="https://x.com/EquinoxIntratve" target="_blank" class="service-card card-hover bg-light/10 p-6 rounded-lg text-center transition-all fade-in">
+                    <div class="text-4xl text-primary mb-4 service-icon"><i class="fab fa-twitter"></i></div>
+                    <h3 class="text-xl font-semibold font-orbitron mb-2">Twitter</h3>
+                    <p class="text-light/80">Follow us on X for real-time updates, game announcements, and community engagement.</p>
+                </a>
+                <a href="https://www.instagram.com/equinox.interactive/" target="_blank" class="service-card card-hover bg-light/10 p-6 rounded-lg text-center transition-all fade-in">
+                    <div class="text-4xl text-primary mb-4 service-icon"><i class="fab fa-instagram"></i></div>
+                    <h3 class="text-xl font-semibold font-orbitron mb-2">Instagram</h3>
+                    <p class="text-light/80">Check out our Instagram for stunning game art, development insights, and studio life.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 border-t border-gray-800">
+            <div class="container mx-auto px-6 py-12">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <a href="#home" class="flex items-center space-x-2">
+                            <span class="text-2xl font-bold gradient-text font-orbitron">Equinox Interactive</span>
+                        </a>
+                        <p class="text-gray-400 mt-2 text-sm">
+                            Games that should be games.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-8">
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#home" class="text-gray-400 hover:text-purple-400 transition">Home</a></li>
+                                <li><a href="#about" class="text-gray-400 hover:text-purple-400 transition">About</a></li>
+                                <li><a href="#team" class="text-gray-400 hover:text-purple-400 transition">Team</a></li>
+                                <li><a href="#portfolio" class="text-gray-400 hover:text-purple-400 transition">Games</a></li>
+                                <li><a href="#services" class="text-gray-400 hover:text-purple-400 transition">Services</a></li>
+                                <li><a href="#contact" class="text-gray-400 hover:text-purple-400 transition">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Connect</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.tiktok.com/@equinox.interactive" target="_blank" class="text-gray-400 hover:text-purple-400 transition">
+                                    <i class="fab fa-tiktok text-lg"></i>
+                                </a>
+                                <a href="https://x.com/EquinoxIntratve" target="_blank" class="text-gray-400 hover:text-purple-400 transition">
+                                    <i class="fab fa-twitter text-lg"></i>
+                                </a>
+                                <a href="https://www.instagram.com/equinox.interactive/" target="_blank" class="text-gray-400 hover:text-purple-400 transition">
+                                    <i class="fab fa-instagram text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 Equinox Interactive All rights reserved.
+                    </p>
+                    <div class="mt-4 md:mt-0">
+                        <p class="text-gray-400 text-sm">
+                            Made with <i class="fas fa-heart text-purple-500"></i> in Indonesia
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="fixed bottom-8 right-8 bg-purple-700 hover:bg-purple-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </button>
+
+        <script src="script.js"> </script>
+    </body>
+    </html>
