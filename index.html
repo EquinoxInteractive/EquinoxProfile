@@ -11,12 +11,12 @@
 </head>
 
 <section class="antialiased">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+        <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900/70 backdrop-blur-xl backdrop-saturate-150 border-b border-gray-800/50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
-                    <a href="#home" class="flex items-center space-x-2">
+                    <a href="#home" class="flex items-center space-x-3">
+                        <img src="assets/logo.png" alt="Equinox Interactive Logo" class="h-8 w-8 object-contain logo-img">
                         <span class="text-2xl font-bold gradient-text font-orbitron">Equinox Interactive</span>
                     </a>
                 </div>
@@ -31,29 +31,42 @@
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <div class="hamburger-icon" id="hamburger-icon">
+                            <div class="hamburger-line"></div>
+                            <div class="hamburger-line"></div>
+                            <div class="hamburger-line"></div>
+                        </div>
                     </button>
                 </div>
             </div>
         </div>
-        
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-gray-900 border-t border-gray-800">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Home</a>
-                <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">About</a>
-                <a href="#team" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Team</a>
-                <a href="#portfolio" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Games</a>
-                <a href="#services" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Services</a>
-                <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Contact</a>
+
+        <div id="mobile-menu" class="md:hidden">
+            <div class="px-2 pt-4 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="mobile-menu-item block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-300">
+                    <i class="fas fa-home mr-3 text-purple-400"></i>Home
+                </a>
+                <a href="#about" class="mobile-menu-item block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-300">
+                    <i class="fas fa-info-circle mr-3 text-purple-400"></i>About
+                </a>
+                <a href="#team" class="mobile-menu-item block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-300">
+                    <i class="fas fa-users mr-3 text-purple-400"></i>Team
+                </a>
+                <a href="#portfolio" class="mobile-menu-item block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-300">
+                    <i class="fas fa-gamepad mr-3 text-purple-400"></i>Games
+                </a>
+                <a href="#services" class="mobile-menu-item block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-300">
+                    <i class="fas fa-cogs mr-3 text-purple-400"></i>Services
+                </a>
+                <a href="#contact" class="mobile-menu-item block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-300">
+                    <i class="fas fa-envelope mr-3 text-purple-400"></i>Contact
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Home Section -->
     <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden pt-16">
         <video autoplay loop muted playsinline class="hero-video">
             <source src="assets/bg.mp4" type="video/mp4">
@@ -91,7 +104,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4 font-orbitron">
-                    <span class="gradient-text">About</span> Our Studio
+                    About Our Studio
                 </h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-emerald-500 mx-auto"></div>
             </div>
@@ -136,10 +149,9 @@
         <!-- Team Section -->
         <section id="team" class="py-20 bg-gray-900">
             <div class="mt-20">
-                <h3 class="text-3xl font-bold mb-10 text-center font-orbitron">Meet <span class="gradient-text">The Team</span></h3>
+                <h3 class="text-3xl font-bold mb-10 text-center font-orbitron">Meet The Team</h3>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Team Member 1 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">               
                     <div class="team-member text-center">
                         <div class="mb-4 overflow-hidden rounded-full w-40 h-40 mx-auto border-2 border-purple-600/30">
                             <a href="https://www.instagram.com/zkyy._mss" target="_blank">
@@ -153,7 +165,6 @@
                         </p>
                     </div>
                     
-                    <!-- Team Member 2 -->
                     <div class="team-member text-center">
                         <div class="mb-4 overflow-hidden rounded-full w-40 h-40 mx-auto border-2 border-purple-600/30">
                             <a href="https://www.instagram.com/swimmingfoxx_" target="_blank">
@@ -167,7 +178,6 @@
                         </p>
                     </div>
                     
-                    <!-- Team Member 3 -->
                     <div class="team-member text-center">
                         <div class="mb-4 overflow-hidden rounded-full w-40 h-40 mx-auto border-2 border-purple-600/30">
                             <a href="https://www.instagram.com/gamersindo_17" target="_blank">
@@ -184,12 +194,12 @@
             </div>
         </section>
 
-    <!-- Portfolio Section -->
+    <!-- Game Section -->
     <section id="portfolio" class="py-20 bg-gray-900/50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4 font-orbitron">
-                    Our <span class="gradient-text">Games</span>
+                    Our Games
                 </h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-emerald-500 mx-auto"></div>
                 <p class="text-gray-400 max-w-2xl mx-auto mt-6">
@@ -197,7 +207,6 @@
                 </p>
             </div>
             
-            <!-- Game 1 -->
             <div class="flex flex-col lg:flex-row items-center gap-10 mb-20 card-hover">
                 <div class="lg:w-1/2 relative group">
                     <div class="overflow-hidden rounded-xl border border-gray-700 shadow-2xl">
@@ -213,6 +222,7 @@
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="bg-gray-800 text-purple-400 px-3 py-1 rounded-full text-sm">PvP</span>
                         <span class="bg-gray-800 text-emerald-400 px-3 py-1 rounded-full text-sm">Co-Op</span>
+                        <span class="bg-gray-800 text-blue-400 px-3 py-1 rounded-full text-sm">Puzzle</span>
                     </div>
                     <p class="text-gray-300 mb-6">
                         Box Siege is a vibrant 2D action platformer that began as local co-op PvP and now delivers a solo story mode with absurd characters, glitchy worlds, and two mind bending endings.
@@ -223,10 +233,11 @@
                         <div class="flex flex-wrap gap-2">
                             <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">Unity</span>
                             <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">Aseprite</span>
+                            <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">Cocos</span>
                         </div>
                     </div>
                     <a href="https://equinoxinteractive.github.io/BoxSiege/" target="_blank" class="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium">
-                        Download Game
+                        View Case Study
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
@@ -241,7 +252,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold mb-4 font-orbitron">
-                    Our <span class="gradient-text">Services</span>
+                    Our Services
                 </h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-emerald-500 mx-auto"></div>
                 <p class="text-gray-400 max-w-2xl mx-auto mt-6">
@@ -250,7 +261,6 @@
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
                 <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
                     <div class="service-icon text-purple-500 text-4xl mb-4">
                         <i class="fas fa-gamepad"></i>
@@ -262,7 +272,6 @@
                     </p>
                 </div>
                 
-                <!-- Service 2 -->
                 <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
                     <div class="service-icon text-purple-500 text-4xl mb-4">
                         <i class="fas fa-lightbulb"></i>
@@ -273,8 +282,7 @@
                         before committing to full production.
                     </p>
                 </div>
-                
-                <!-- Service 3 -->
+
                 <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
                     <div class="service-icon text-purple-500 text-4xl mb-4">
                         <i class="fas fa-paint-brush"></i>
@@ -285,8 +293,7 @@
                         textures, and animations tailored to your game's style.
                     </p>
                 </div>
-                
-                <!-- Service 4 -->
+
                 <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
                     <div class="service-icon text-purple-500 text-4xl mb-4">
                         <i class="fas fa-music"></i>
@@ -297,8 +304,7 @@
                         that enhance gameplay and emotional impact.
                     </p>
                 </div>
-                
-                <!-- Service 5 -->
+
                 <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
                     <div class="service-icon text-purple-500 text-4xl mb-4">
                         <i class="fas fa-rocket"></i>
@@ -309,8 +315,7 @@
                         and launch strategy to maximize your game's success.
                     </p>
                 </div>
-                
-                <!-- Service 6 -->
+
                 <div class="service-card bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-purple-600/50 transition duration-300">
                     <div class="service-icon text-purple-500 text-4xl mb-4">
                         <i class="fas fa-users"></i>
@@ -325,31 +330,41 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Sosial Media Section -->
     <section id="contact" class="py-20 bg-dark">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold font-orbitron text-center gradient-text mb-12 slide-up">
-                Connect With Us
-            </h2>
-            <p class="text-center text-light/80 max-w-2xl mx-auto mb-12 fade-in">
-                Follow us on social media to stay updated with our latest projects, news, and behind-the-scenes content.
-            </p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 font-orbitron">
+                    Our Social Media
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-emerald-500 mx-auto"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-6">
+                    Follow us on social media to stay updated with our latest projects, news, and behind-the-scenes content.
+                </p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <a href="https://www.tiktok.com/@equinox.interactive" target="_blank" class="service-card card-hover bg-light/10 p-6 rounded-lg text-center transition-all fade-in">
-                    <div class="text-4xl text-primary mb-4 service-icon"><i class="fab fa-tiktok"></i></div>
-                    <h3 class="text-xl font-semibold font-orbitron mb-2">TikTok</h3>
+                <div class="service-card card-hover bg-light/10 p-6 rounded-lg text-center transition-all fade-in">
+                    <a href="https://www.tiktok.com/@equinox.interactive" target="_blank">
+                        <div class="text-4xl text-primary mb-4 service-icon"><i class="fab fa-tiktok"></i></div>
+                        <h3 class="text-xl font-semibold font-orbitron mb-2">TikTok</h3>
+                    </a>
                     <p class="text-light/80">Join us on TikTok for fun game dev content, teasers, and creative behind-the-scenes moments.</p>
-                </a>
-                <a href="https://x.com/EquinoxIntratve" target="_blank" class="service-card card-hover bg-light/10 p-6 rounded-lg text-center transition-all fade-in">
-                    <div class="text-4xl text-primary mb-4 service-icon"><i class="fab fa-twitter"></i></div>
-                    <h3 class="text-xl font-semibold font-orbitron mb-2">Twitter</h3>
+                </div>
+                <div class="service-card card-hover bg-light/10 p-6 rounded-lg text-center transition-all fade-in">
+                    <a href="https://x.com/EquinoxIntratve" target="_blank">
+                        <div class="text-4xl text-primary mb-4 service-icon"><i class="fab fa-twitter"></i></div>
+                        <h3 class="text-xl font-semibold font-orbitron mb-2">Twitter</h3>
+                    </a>
                     <p class="text-light/80">Follow us on X for real-time updates, game announcements, and community engagement.</p>
-                </a>
-                <a href="https://www.instagram.com/equinox.interactive/" target="_blank" class="service-card card-hover bg-light/10 p-6 rounded-lg text-center transition-all fade-in">
-                    <div class="text-4xl text-primary mb-4 service-icon"><i class="fab fa-instagram"></i></div>
-                    <h3 class="text-xl font-semibold font-orbitron mb-2">Instagram</h3>
-                    <p class="text-light/80">Check out our Instagram for stunning game art, development insights, and studio life.</p>
-                </a>
+                </div>
+                <div class="service-card card-hover bg-light/10 p-6 rounded-lg text-center transition-all fade-in">
+                    <a href="https://www.instagram.com/equinox.interactive/" target="_blank" >
+                        <div class="text-4xl text-primary mb-4 service-icon"><i class="fab fa-instagram"></i></div>
+                        <h3 class="text-xl font-semibold font-orbitron mb-2">Instagram</h3>
+                    </a>
+                        <p class="text-light/80">Check out our Instagram for stunning game art, development insights, and studio life.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -359,7 +374,8 @@
             <div class="container mx-auto px-6 py-12">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="mb-6 md:mb-0">
-                        <a href="#home" class="flex items-center space-x-2">
+                        <a href="#home" class="flex items-center space-x-3">
+                            <img src="assets/logo.png" alt="Equinox Interactive Logo" class="h-8 w-8 object-contain logo-img">
                             <span class="text-2xl font-bold gradient-text font-orbitron">Equinox Interactive</span>
                         </a>
                         <p class="text-gray-400 mt-2 text-sm">
