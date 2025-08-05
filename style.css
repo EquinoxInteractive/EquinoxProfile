@@ -17,15 +17,6 @@
         h1, h2, h3, h4, a, .font-orbitron {
             font-family: 'Orbitron', sans-serif;
         }
-
-        /* Navigation styles */
-        nav {
-            transition: transform 0.3s ease-in-out, background-color 0.3s ease;
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            background: rgba(17, 24, 39, 0.7);
-            border-bottom: 1px solid rgba(75, 85, 99, 0.3);
-        }
         
         .hero-video {
             position: absolute;
@@ -77,12 +68,8 @@
             width: 100%;
         }
         
-        .service-icon {
-            transition: all 0.3s ease;
-        }
-        
         .service-card:hover .service-icon {
-            transform: scale(1.1);
+            transition: all 0.3s ease;
             color: #6d28d9;
         }
         
@@ -101,8 +88,7 @@
             filter: grayscale(0%);
             opacity: 1;
         }
-        
-        /* Animation classes */
+
         .fade-in {
             animation: fadeIn 1s ease-in;
         }
@@ -200,14 +186,14 @@
             transform: translateY(0);
             opacity: 1;
         }
-        
+
         #mobile-menu.show .mobile-menu-item:nth-child(1) { transition-delay: 0.1s; }
         #mobile-menu.show .mobile-menu-item:nth-child(2) { transition-delay: 0.15s; }
         #mobile-menu.show .mobile-menu-item:nth-child(3) { transition-delay: 0.2s; }
         #mobile-menu.show .mobile-menu-item:nth-child(4) { transition-delay: 0.25s; }
         #mobile-menu.show .mobile-menu-item:nth-child(5) { transition-delay: 0.3s; }
         #mobile-menu.show .mobile-menu-item:nth-child(6) { transition-delay: 0.35s; }
-
+        
         /* Scroll */    
         ::-webkit-scrollbar {
             width: 5px;
@@ -261,4 +247,3 @@
                 transform: translateY(0);
             }
         }
-
