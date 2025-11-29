@@ -45,6 +45,14 @@ nav {
     will-change: transform;
 }
 
+#about img[alt="equinoxinteractive"] {
+    max-height: 550px;
+    margin-left: 250px;
+    object-fit: cover;
+    width: auto;
+    height: auto;
+}
+
 .hero-video {
     position: absolute;
     top: 0;
@@ -336,6 +344,10 @@ nav {
     
     .team-member:hover img {
         box-shadow: 0 5px 15px rgba(109, 40, 217, 0.2);
+    }
+
+    #about img[alt="equinoxinteractive"] {
+        margin-left: 0;
     }
 }
 
